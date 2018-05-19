@@ -1,0 +1,33 @@
+<html>
+
+    <head>
+    
+        <title>Object Creation Functions</title>
+    
+    </head>
+    <body>
+    
+        <div id="objectDiv"></div>
+        
+        <script type="text/javascript">
+        
+            var churrasco = {
+                
+                entrada: "pão de alho",
+                pratoPrincipal: "picanha",
+                bebida: "cerveja",
+                sobremesa: "mousse de limão",
+                
+            }
+            
+            churrasco.bebida2 = "Pepsi Twist";
+            
+            delete churrasco.bebida;
+            
+            document.getElementById('objectDiv').innerHTML = "No churrasco vai ter " + churrasco.entrada + ", " + churrasco.pratoPrincipal + ", " + churrasco.bebida2 + " e " + churrasco.sobremesa + "!";
+        
+        </script>
+    
+    </body>
+
+</html>
