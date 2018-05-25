@@ -24,8 +24,60 @@
             
             changeName(person);
             
-            console.log(person.name);
+            //console.log(person.name);
         
+            //Prototype
+            function Car(year, color) {
+                this.year = year
+                this.color = color
+            }
+            
+            Car.prototype.brand = 'Chevrolet'
+            
+            console.log(Car.prototype)
+            
+            var Camaro = new Car('2007', 'Amarelo')
+            
+            console.log(Camaro.__proto__)
+            console.log(Camaro.color)
+            //Methods
+            var user = {
+                firstName: "Julio",
+                lastName : "Cézar",
+                id       : 8867,
+                fullName : function() {
+                    return this.firstName + " " + this.lastName;
+                }
+            }
+            
+            //console.log(user.fullName())
+            
+            var text = 'Bora comer?'
+            var upper = text.toUpperCase();
+            
+            //console.log(upper)
+            
+            //Instantiation
+            var people = function(name, age, homeState){
+                var results = {};
+                results.name = name;
+                results.age = age;
+                results.homeState = homeState;
+                results.sayName = personMethod.sayName;
+
+                return results;
+            }
+            
+            var personMethod = {};
+            personMethod.sayName = function(){
+                alert(this.name);
+            }
+
+            //later
+            var Tyler = people("Tyler", 23, "Utah");
+            var Joey = people("Joey", 25, "Arkansas");
+            
+            
         </script>
     
     </body>
